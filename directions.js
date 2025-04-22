@@ -1544,6 +1544,7 @@ const directionsEn = {
 
 
 
+
 // Telugu directions
 const directionsTe = {
   "1_north_1_stairs": "మీ ఎడమవైపు గేట్ 1 కనబడే వరకు నేరుగా ముందుకు వెళ్లండి\nఎడమవైపు తిరిగి కొద్దిదూరం నడవండి\nమీ గమ్యస్థానం వచ్చేసింది",
