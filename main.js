@@ -886,5 +886,32 @@ document.querySelectorAll("select").forEach((select) => {
   })
 })
 
-// Initialize the app when DOM is loaded
+//Initialize the app when DOM is loaded
 document.addEventListener("DOMContentLoaded", initApp)
+
+document.getElementById("scan-qr-button").addEventListener("click", function () {
+  document.getElementById("qrModal").style.display = "block";
+});
+
+function closeQRModal() {
+  document.getElementById("qrModal").style.display = "none";
+}
+
+// Listen for message from iframe
+window.addEventListener('message', function (event) {
+  if (event.data === 'closeModal') {
+    closeQRModal();
+  }
+});
+
+function openScannerPage() {
+  // Open scanner.html in a modal
+  const qrModal = document.getElementById("qrModal");
+  qrModal.style.display = "block";
+}
+
+// Close the QR modal
+function closeQRModal() {
+  const qrModal = document.getElementById("qrModal");
+  qrModal.style.display = "none";
+}
